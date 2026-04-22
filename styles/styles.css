@@ -2,7 +2,10 @@
 @import "./colors.css";
 @import "./fonts.css";
 
-/* Shared / Utility */
+html {
+  scroll-behavior: smooth;
+}
+
 html:has(body.menu-open) {
   overflow: hidden;
 }
@@ -542,6 +545,41 @@ body {
   font-size: 14px;
   color: var(--primary-text);
   margin-bottom: 0;
+}
+
+/* Scroll to Top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-button-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 99;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus-visible {
+  background: var(--primary-button-hover-bg);
+  transform: translateY(-4px);
+}
+
+.scroll-to-top img {
+  width: 24px;
+  height: 24px;
 }
 
 /* Mobile Menu Overlay */
