@@ -40,13 +40,7 @@ coverage/
 docs/
 icons/
 
-# Service files and internal planning
-PROJECT_STATE.md
-design_system.md
-walkthrough.md
-task.md
-implementation_plan.md
-fix-images.js
+
 
 # System files
 desktop.ini
